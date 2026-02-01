@@ -8,11 +8,28 @@ function isWeight(str) {
     return Number.isFinite(num) && num < 1000 && num > 0;
 }
 
+function drawCircle(color, weight) {
+    ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
+    ctx.beginPath();
+    ctx.arc(200, 200, 180, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+
+    ctx.fillStyle = "#000000";
+    ctx.font = "trebuchet ms";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(weight, 200, 200);
+}
+
 const colorInput = document.getElementById('color');
 const weightInput = document.getElementById('weight');
 const colorError = document.getElementById('colorError');
 const weightError = document.getElementById('weightError');
 const button1 = document.getElementById('button1');
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 button1.addEventListener('click', 
     function makeDecal(){
@@ -27,8 +44,7 @@ button1.addEventListener('click',
         } else if (isWeight(weight) == false || weight == "") {
             weightError.textContent = "Invalid weight!";
         } else {
-            /*Make the decal*/
-            alert("Making the decal");
+            drawCircle(color, weight);
         }
 
     }

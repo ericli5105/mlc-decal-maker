@@ -6,20 +6,26 @@ h1 {
     color:white;
 }
 
-p{
+p {
 	color:white;
 }
 
-label{
+label {
     color:white;
 }
 
-.error{
+.error {
     color:red;
     font-size: 0.9em;
-    margin: 4px 0 10px
+    /* margin: 4px 0 10px */
 }
 
 .invalid {
     border: 2px solid red;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    display: block;
+    margin-top: 10px;
 }
