@@ -9,14 +9,14 @@ function isWeight(str) {
 }
 
 function drawCircle(color, weight) {
-    ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.arc(200, 200, 180, 0, Math.PI * 2);
     ctx.fillStyle = color;
     ctx.fill();
 
     ctx.fillStyle = "#000000";
-    ctx.font = "trebuchet ms";
+    ctx.font = "24px Trebuchet MS";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(weight, 200, 200);
