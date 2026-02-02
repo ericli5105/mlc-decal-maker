@@ -25,7 +25,7 @@ function drawCircle(color, weight) {
     }
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(modifiedWeight, 200, 200+18);
+    ctx.fillText(modifiedWeight, 200, 200+12);
 }
 
 const colorInput = document.getElementById('color');
